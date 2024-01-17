@@ -12,6 +12,7 @@
 
 body {
   font-family: Inter;
+  background: #8080804f;
 }
 
 @layer utilities {
