@@ -5,9 +5,10 @@ type ButtonProps = {
     title: string;
     icon?: string;
     variant: 'btn_dark_green'
+    full?: boolean;
 }
 
-const Button = ({ type, title, icon, variant }: ButtonProps) => {
+const Button = ({ type, title, icon, variant, full }: ButtonProps) => {
   return (
     <button
         className={`flexCenter gap-3 rounded-full border ${variant}`} 
