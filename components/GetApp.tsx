@@ -1,10 +1,11 @@
 import React from 'react'
 import Button from './Button'
+import Image from 'next/image'
 
 const GetApp = () => {
   return (
     <section className="flexCenter w-full flex-col pd-[100px]">
-      <div className="get-app">
+      <div className="get-app rounded-3xl">
         <div className="z-20 flex w-full flex-1 flex-col items-start justify-center gap-12">
           <h2 className="bold-40 lg:bold-64 xl:max-w-[320px]">Get For Free Now!</h2>
           <p className="regular-16 text-gray-10">Available On iOS and Android</p>
@@ -14,20 +15,27 @@ const GetApp = () => {
               type='button'
               title='Apple Store'
               icon='/apple.svg'
-              variant='bnt_white'
+              variant='btn_white'
               full
             />
             <Button 
               type='button'
               title='Play Store'
               icon='/android.svg'
-              variant='bnt_dark_green_outline'
+              variant='btn_dark_green_outline'
               full
             />
           </div>
         </div>
 
-        .flex
+        <div className="flex flex-1 items-center justify-end">
+          <Image
+            src='/phones.png'
+            alt='phones'
+            width={550}
+            height={870}
+          />
+        </div>
       </div>
     </section>
   )
