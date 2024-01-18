@@ -1,3 +1,4 @@
+import { FEATURES } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
 
@@ -15,9 +16,46 @@ const Features = () => {
           />
         </div>
 
-        .
+        <div className="z-20 flex w-full flex-col lg:w-[60%]">
+          <div className="relative">
+            <Image 
+              src="/camp.svg"
+              alt='camp'
+              width={50}
+              height={50}
+              className='absolute left-[-5px] top-[-28px] w-10 lg:w-[50px]' 
+            />
+            <h2 className="bold-40 lg:bold-64">Our Features</h2>
+            <ul>
+              {FEATURES.map((feature) => (
+                <FeatureItem 
+                  key={feature.title}
+                  title={feature.title} 
+                  icon={feature.icon}
+                  variant={feature.variant}
+                  description={feature.description}
+                />
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
+  )
+}
+
+type FeatureItem ={
+  title: string
+  icon: string
+  variant: string
+  description:string
+}
+
+const FeatureItem = ({ title, icon, variant, description }: FeatureItem) => {
+  return (
+    <li>
+      {title}
+    </li>
   )
 }
 
