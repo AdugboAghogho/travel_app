@@ -5,6 +5,7 @@ type ButtonProps = {
     title: string;
     icon?: string;
     variant: 'btn_dark_green'
+    variants:'btn_dark_green_outline'
     full?: boolean;
 }
 
