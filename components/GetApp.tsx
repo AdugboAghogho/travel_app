@@ -15,7 +15,7 @@ const GetApp = () => {
               type='button'
               title='Apple Store'
               icon='/apple.svg'
-              variant='btn_white'
+              variant="btn_dark_green"
               full
             />
             <Button 
